@@ -172,8 +172,6 @@ const fakeInfo = {
     ]
 }
 function Home() {
-    let hour = new Date().getHours()
-    console.log(hour);
     return (
         <div >
             <div className="HomeContainer">
@@ -183,7 +181,6 @@ function Home() {
                 </div>
                 <div className="weatherForcast">
                     {fakeInfo.DailyForecasts.map((day, index) => {
-                        console.log(day.Date.split("T"));
                         let forcastDays = day.Date.split("T")[0];
                         return (
                             <div className="day" key={index}>
