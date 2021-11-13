@@ -1,9 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit'
-import counterReducer from './actions/counter-slice'
-
+import { citySlice, watherForcastSlice, favoriteSlice ,ThemColor} from './weather/weather'
+const city = citySlice.reducer
+const weatherForcast = watherForcastSlice.reducer
+const favorite = favoriteSlice.reducer
+const them = ThemColor.reducer
 export const store = configureStore({
     reducer: {
-        counter: counterReducer
+        currntCity: city,
+        ThemColor:them,
+        favorits: favorite,
+        forcast: weatherForcast
     }
 })
 

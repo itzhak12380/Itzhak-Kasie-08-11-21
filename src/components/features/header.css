@@ -1,0 +1,32 @@
+.header{
+    width: 85vw;
+    flex-grow: 1;
+}
+.Toolbar{
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+    font-size: x-large;
+}
+.routs{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+.Link{
+    color: white;
+}
+@media all and (max-width:600px) {
+    .header{
+        width: 80vw;
+        background-color: black;
+    }
+    .title{
+        font-size: smaller;
+    }
+    .routs{
+        width: 60%;
+    }
+ 
+}

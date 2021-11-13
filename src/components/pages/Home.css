@@ -1,41 +1,73 @@
 .HomeContainer{
-    /* margin-top: 10px; */
     width: 85vw;
     height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: black;
-    /* background-color: #2d353f; */
-    background-image:url('../../img/weatherPic.jpg');
     background-size: cover;
     background-position: center;
     justify-content: space-evenly;
  
+}
+@media all and (max-width:600px) {
+    .HomeContainer{
+        width: 80vw;
+        font-size: smaller;
+    }
+    .day{
+        width: 100%;
+    }
+    .searchInput{
+        width: 30%;
+    }
 }
 .search{
     width: fit-content;
     height: fit-content;
     display: block;
 }
+.athocomplete{
+    /* position: absolute; */
+ 
+  /* right: 10px; */
+  /* top: 52px; */
+  /* width: 520px; */
+  overflow: scroll;
+   width: 200px;
+   height: 150px;
+
+    overflow: scroll;
+}
+.searcContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.athocomplete::-webkit-scrollbar {
+    display: none;
+  }
+  .option{
+      width: inherit;
+      height: 30px;
+      border-width: 0px 1px 1px 1px;
+      border-style: solid;
+      border-color: goldenrod;
+      background-color: whitesmoke;
+      border-radius: 10%;
+  }
 .day{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     width: 40%;
-    /* background-color: yellow; */
 }
 
 .weatherForcast{
     width: 75vw;
     height: 60vh;
     overflow: scroll;
-    /* scrollbar-width: none; */
-    /* background-color: rgb(202, 197, 230); */
-    /* background-image:url('../../img/weatherPic.jpg'); */
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -47,14 +79,11 @@
     width: 60px;
     height: 36px;
     border-radius: 15%;
-    background-color: #1597E5;
     color: white;
     border: none;
 }
 .searchButton:hover{
-    color: red;
-    background-color: #1597E5;
-    
+    color: red;    
 }
 .searchInput{
     width: 200px;

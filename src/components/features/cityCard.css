@@ -1,0 +1,32 @@
+
+.card{
+    width: 400px;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid 2px red;
+}
+.saveButton{
+    height: 35px;
+    margin-top: 20px;
+    border-radius: 15%;
+    background-color: #1597E5;
+    color: white;
+    border: none;
+
+}
+.saveSpan{
+    margin-top: 20px;
+    color: white;
+}
+@media all and (max-width:600px) {
+    .card{
+        flex-direction: column;
+        width: 300px;
+        align-items: center;
+    }
+    .saveButton{
+        width: 50%;
+    }
+}
