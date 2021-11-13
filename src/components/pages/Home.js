@@ -14,7 +14,7 @@ function Home() {
     const cityName = async (e) => {
 
         const base = "http://dataservice.accuweather.com/locations/v1/cities/autocomplete"
-        const query = `?apikey=${process.env.REACT_APP_APIKEY}&q=${e.target.value}`
+        const query = `?apikey=x9oGCV9tals7Wpdz7kdMunbGAn8GFAoz&q=${e.target.value}`
         const responce = await fetch(base + query)
         const data = await responce.json();
         setCityAraay(data)
