@@ -1,15 +1,15 @@
 import { Forcast, currntCity } from '../../redux/weather/weather'
 const key = process.env.REACT_APP_APIKEY
 export async function  getWeather(id) {
-    const base = "https://dataservice.accuweather.com/forecasts/v1/daily/5day/"
-    const query = `${id}?apikey=x9oGCV9tals7Wpdz7kdMunbGAn8GFAoz`
+    const base = "http://dataservice.accuweather.com/forecasts/v1/daily/5day/"
+    const query = `${id}?apikey=${key}`
     const responce = await fetch(base + query)
     const data = await responce.json()
     return data;
  }
 export async function getCity(city) {
-    const base = "https://dataservice.accuweather.com/locations/v1/cities/autocomplete"
-    const query = `?apikey=x9oGCV9tals7Wpdz7kdMunbGAn8GFAoz&q=${city}`
+    const base = "http://dataservice.accuweather.com/locations/v1/cities/autocomplete"
+    const query = `?apikey=${key}&q=${city}`
     const responce = await fetch(base + query)
     const data = await responce.json();
     console.log(data);
