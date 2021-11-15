@@ -28,5 +28,7 @@
     .routs{
         width: 60%;
     }
- 
+    .themButton{
+        font-size: x-small;
+    } 
 }

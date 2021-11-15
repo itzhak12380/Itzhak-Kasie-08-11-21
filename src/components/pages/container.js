@@ -9,6 +9,7 @@ import {
     Route,
 } from 'react-router-dom'
 import { fetchData } from '../features/fetchData'
+import ErrorComponent from '../features/errorComponent'
 const style = {
     height: '96vh',
     display: 'flex',
@@ -31,6 +32,11 @@ function Container() {
             return null
         }
     }, [])
+    if (HandleError) {
+        return (
+            <ErrorComponent/>
+        )
+    }
     return (
         <Router>
             <div style={style}>

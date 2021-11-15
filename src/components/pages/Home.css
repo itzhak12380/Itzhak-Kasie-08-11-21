@@ -28,11 +28,6 @@
     display: block;
 }
 .athocomplete{
-    /* position: absolute; */
- 
-  /* right: 10px; */
-  /* top: 52px; */
-  /* width: 520px; */
   overflow: scroll;
    width: 200px;
    height: 150px;
@@ -51,10 +46,12 @@
       width: inherit;
       height: 30px;
       border-width: 0px 1px 1px 1px;
-      border-style: solid;
-      border-color: goldenrod;
-      background-color: whitesmoke;
+      opacity: 0.9;
+      border-bottom: solid 1px red;
       border-radius: 10%;
+  }
+  .option:hover{
+      background-color: #1597E5;
   }
 .day{
     display: flex;

@@ -3,6 +3,7 @@ import './Home.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchData } from '../features/fetchData';
 import CityCard from '../features/cityCard';
+import ErrorComponent from '../features/errorComponent';
 function Home() {
     const dispatch = useDispatch();
     const myForcast = useSelector(state => state.forcast)
@@ -12,33 +13,18 @@ function Home() {
     let [input, setinput] = useState()
     const [ErorrCatch, setErorr] = useState(false)
     const cityName = async (e) => {
-
         const base = "http://dataservice.accuweather.com/locations/v1/cities/autocomplete"
         const query = `?apikey=${process.env.REACT_APP_APIKEY}&q=${e.target.value}`
         const responce = await fetch(base + query)
         const data = await responce.json();
         setCityAraay(data)
-        if (e.target.value === "") {
-            // setDisplay(false)
-            console.log("empty");
-        }
         setinput((item) => { return item = e.target.value })
 
     }
     if (ErorrCatch) {
         return (
-            <div>
-                <img style={{ width: "300px", height: '250px' }} src='http://cdn.shopify.com/s/files/1/1061/1924/products/Very_sad_emoji_icon_png_grande.png?v=1571606089' />
-                <h1> Error page not found</h1>
-                <h2>please refresh the page or try again later</h2>
-            </div>
+            <ErrorComponent/>
         )
-    }
-    const chooseCity = value => {
-        console.log(value);
-        setinput(value)
-        console.log(input);
-        setDisplay(false)
     }
     return (
         <div >
@@ -51,17 +37,16 @@ function Home() {
                     <div className="athocomplete">
                         {Display && CityAraay.map((city, index) => {
                             return (
-                                <div>
-                                    <div onClick={() => document.getElementById("searchInput").value = city.LocalizedName} className="option" tabIndex="0" key={index}>
-                                        <span >{city.LocalizedName}</span>
+                                <div onClick={() => setDisplay(false)} key={index}>
+                                    <div style={{color:ThemColor.color,backgroundColor:ThemColor.optionsBackground}} onClick={() => document.getElementById("searchInput").value = city.LocalizedName} className="option" tabIndex="0" key={index}>
+                                        <span  >{city.LocalizedName}</span>
                                     </div>
                                 </div>
-
                             )
                         })}
-
                     </div>
                     {Display && <button className="searchButton" style={{ backgroundColor: ThemColor.buttonColor }} onClick={() => setDisplay(false)}>close</button>}
+
                 </div>
                 <div >
 

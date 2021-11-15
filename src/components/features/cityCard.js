@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './cityCard.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { add, cut } from '../../redux/weather/weather'
@@ -19,10 +19,10 @@ function CityCard() {
         return false
     }
     return (
-        <div className="card" style={{color:ThemColor.color}}>
+        <div className="card" style={{ color: ThemColor.color }}>
             <h3>city: {City.LocalizedName}</h3>
             <h3>key: {City.Key}</h3>
-            {isFavo() ? <span style={{color:ThemColor.color}} className="saveSpan"> location saved</span> : <button style={{ backgroundColor: ThemColor.buttonColor }} type="button" className="saveButton" onClick={addToFavorite}> save locations </button>}
+            {isFavo() ? <span style={{ color: ThemColor.color }} className="saveSpan"> location saved</span> : <button style={{ backgroundColor: ThemColor.buttonColor }} type="button" className="saveButton" onClick={addToFavorite}> save locations </button>}
 
         </div>
     )

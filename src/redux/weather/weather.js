@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 import { light } from '../../components/features/them'
 export const citySlice = createSlice({
     name: "city",
