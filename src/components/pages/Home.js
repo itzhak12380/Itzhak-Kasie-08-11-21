@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState } from 'react'
 import './Home.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchData } from '../features/fetchData';

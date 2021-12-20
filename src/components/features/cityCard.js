@@ -1,7 +1,7 @@
 import React from 'react'
 import './cityCard.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { add, cut } from '../../redux/weather/weather'
+import { add } from '../../redux/weather/weather'
 function CityCard() {
     const dispatch = useDispatch()
     const City = useSelector(state => state.currntCity.data)
