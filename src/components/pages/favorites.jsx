@@ -26,9 +26,9 @@ function Favorites() {
         "width": "85vw",
         "height": "70vh",
         "display": "flex",
-        "flex-wrap": "wrap",
+        "flexWrap": "wrap",
         "color": ThemColor.color,
-        "justify-content": "space-evenly",
+        "justifyContent": "space-evenly",
     }
     return (
         <div >

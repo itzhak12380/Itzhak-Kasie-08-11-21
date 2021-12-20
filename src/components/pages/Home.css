@@ -105,3 +105,6 @@
     width: 220px;
     transition: 200ms ease-out;
 }
+.city{
+    cursor: grab;
+}

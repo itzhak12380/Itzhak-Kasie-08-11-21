@@ -31,7 +31,7 @@ function Home() {
             <div className="HomeContainer" style={{ backgroundImage: `url("${ThemColor.backgorundImg}")`, color: ThemColor.color }}>
                 <div className="searcContainer">
                     <div className="search">
-                        <input className="searchInput" id="searchInput" onClick={() => { setDisplay(true) }} onChange={cityName} placeholder="search city" />
+                        <input className="searchInput" autoComplete="off" id="searchInput" onClick={() => { setDisplay(true) }} onChange={cityName} placeholder="search city" />
                         <button className="searchButton" style={{ backgroundColor: ThemColor.buttonColor }} variant="text" onClick={() => { fetchData(input, setErorr, dispatch) }}>search</button>
                     </div>
                     <div className="athocomplete">
@@ -39,7 +39,7 @@ function Home() {
                             return (
                                 <div onClick={() => setDisplay(false)} key={index}>
                                     <div style={{color:ThemColor.color,backgroundColor:ThemColor.optionsBackground}} onClick={() => document.getElementById("searchInput").value = city.LocalizedName} className="option" tabIndex="0" key={index}>
-                                        <span  >{city.LocalizedName}</span>
+                                        <span className='city'  >{city.LocalizedName}</span>
                                     </div>
                                 </div>
                             )
