@@ -34,7 +34,7 @@ const Header = () => {
                 <AppBar position="static" style={{ backgroundColor:ThemColor.headerColor }} >
                     <Toolbar className="Toolbar" >
                         <p className="title"  >
-                            Herolo/Abra
+                            Itzhak Kasie
                         </p>
                         <div className="routs" >
                             <Stack direction="row" spacing={1} alignItems="center">
