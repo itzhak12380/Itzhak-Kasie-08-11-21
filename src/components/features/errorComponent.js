@@ -14,7 +14,7 @@ export function LimitExceeded(){
     <div>
     <img style={{ width: "300px", height: '250px' }} src='http://cdn.shopify.com/s/files/1/1061/1924/products/Very_sad_emoji_icon_png_grande.png?v=1571606089' />
     <h1> Error page not found</h1>
-    <h4>We'm sorry but the amount that can be used for the api key has exceeded its limit. Please get back to us later  thank you</h4>
+    <h4>We'r sorry but the amount that can be used for the api key has exceeded its limit. Please get back to us later  thank you</h4>
 </div>
     )
 }
