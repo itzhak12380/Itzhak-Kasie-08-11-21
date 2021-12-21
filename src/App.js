@@ -3,7 +3,7 @@ import './App.css';
 import Container from './components/pages/container';
 import { useSelector } from 'react-redux';
 import { getCity } from './components/features/fetchData';
-import ErrorComponent from './components/features/errorComponent'
+import {LimitExceeded} from './components/features/errorComponent'
 function App() {
   const [isKeyExpierd, setisKeyExpierd] = useState(false)
   useEffect(async () => {
@@ -14,9 +14,8 @@ function App() {
   const ThemColor = useSelector(state => state.ThemColor.data)
   if (isKeyExpierd) {
     return (
-      <div style={{display:'flex',flexWrap:'wrap',justifyContent:'center',alignItems:'center',flexDirection:'column'}}>
-        <ErrorComponent/>
-        <span>We'm sorry but the amount that can be used for the api key has exceeded its limit. Please get back to us later  thank you</span>
+      <div style={{width:'100vw', display:'flex',flexWrap:'wrap',justifyContent:'center',alignItems:'center',flexDirection:'column'}}>
+        <LimitExceeded/>
       </div>
     )
   }
